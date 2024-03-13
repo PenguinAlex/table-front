@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+
+
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>
+                Cтуденты
+            </h1>
+
+            <h2>
+                Поиск по фильтру
+            </h2>
+            <form action="#" class="form-filter" id="form-filter">
+                <input id="filter__fio" class="input-filter" type="text" placeholder="ФИО">
+                <input id="filter__faculty" class="input-filter" type="text" placeholder="Факультет">
+                <input id="filter__study-start" class="input-filter" type="number" placeholder="Год начала обучения">
+                <input id="filter__study-end" class="input-filter" type="number" placeholder="Год окончания обучения">
+            </form>
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th id="thFIO">ФИО студента</th>
+                        <th id="thFaculty">Факультет</th>
+                        <th id="thBirth">Дата рождения</th>
+                        <th id="thStudyYear">Годы обучения</th>
+                        <th id="deleteStudents">Удалить</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+            <form action="#" class="form-add" id="form-add">
+                <h2 class="suptitle form__suptitle">
+                    Добавление нового студента
+                </h2>
+                <label for="form-add__name" class="form__label">
+                    <input class="input-add input-add__name" id="form-add__name" type="text" placeholder="Имя">
+                </label>
+                <label for="form-add__surname" class="form__label">
+                    <input class="input-add" id="form-add__surname" type="text" placeholder="Фамилия">
+                </label>
+                <label for="form-add__middlename" class="form__label">
+                    <input class="input-add" id="form-add__middlename" type="text" placeholder="Отчество">
+                </label>
+                <label for="form-add__birth" class="form__label">
+                    <input class="input-add" id="form-add__birth" type="text" placeholder="Дата Рождения"
+                        min="1900-01-01" onfocus="(this.type='date')" onblur="(this.type='text')">
+                </label>
+                <label for="form-add__yearstudy" class="form__label">
+                    <input class="input-add" id="form-add__yearstudy" type="number" placeholder="Год начала обучения"
+                        min="2000">
+                </label>
+                <label class="form__label">
+                    <input class="input-add" id="form-add__faculty" type="text" placeholder="Факультет">
+                </label>
+                <button class="btn-add">Добавить</button>
+            </form>
+        </div>
+
+    </section>
+</body>
+
+</html>
