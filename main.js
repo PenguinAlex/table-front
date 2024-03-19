@@ -184,7 +184,6 @@ renderStudentsTable();
 
 formAdd.addEventListener('submit', async function (e) {
   e.preventDefault();
-  if (validation.isValid == true) {
     const response = await fetch('http://localhost:3000/api/students', {
       method: 'POST',
       body: JSON.stringify({
@@ -208,7 +207,6 @@ formAdd.addEventListener('submit', async function (e) {
 
     formAdd.submit();
     formAdd.reset();
-  }
 })
 
 // форма фильтрации
